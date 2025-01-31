@@ -1,0 +1,443 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100@200@300@400@500@600@700@800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Inter", sans-serif;
+}
+header {
+  top: 0;
+  position: sticky;
+  width: 100%;
+}
+.dropdown {
+  display: none;
+}
+.heading_pro {
+  text-align: center;
+  font-size: 65px;
+  font-weight: 450;
+  letter-spacing: 0.35rem;
+  color: #971ff9;
+  text-transform: uppercase;
+}
+nav {
+  color: #971ff9;
+  letter-spacing: 0.15rem;
+  display: flex;
+  align-items: center;
+  padding: 45px;
+  justify-content: center;
+}
+.style_text {
+  color: #971ff9;
+}
+.title {
+  display: flex;
+  align-self: flex-start;
+  font-size: 26px;
+}
+ul {
+  display: flex;
+  gap: 1.5rem 1.5rem;
+}
+ul li {
+  color: #f5f5f5;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-size: 21px;
+  cursor: pointer;
+}
+ul li a {
+  color: #f5f5f5;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-size: 21px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.menu-links {
+  display: flex;
+}
+
+ul li:hover {
+  color: #971ff9;
+}
+ul li:is(:link, :active, :visited).active {
+  color: #971ff9;
+}
+ul li:active {
+  color: #971ff9;
+}
+.active {
+  background-color: #971ff9;
+  padding: 45px;
+  transition: all ease-out 0.25s;
+}
+main {
+  min-height: 150vh;
+}
+
+.Home {
+  display: flex;
+  background-image: url("./images/bg.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  align-items: center;
+  padding: 25px;
+  padding-bottom: 50px;
+  scroll-behavior: smooth;
+  color: #f5f5f5;
+}
+.Home section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 1280px;
+  margin: auto;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  justify-content: space-around;
+  letter-spacing: 0.15rem;
+}
+.description h1 {
+  text-align: center;
+  font-size: 90px;
+  font-weight: 450;
+  letter-spacing: 0.35rem;
+}
+
+.description p {
+  font-size: 18px;
+  font-style: italic;
+}
+.description h3,
+.description > p {
+  text-align: center;
+  letter-spacing: 0.25rem;
+}
+.description h3 {
+  font-size: 25px;
+}
+.About,
+.Contact section,
+.Contacts section {
+  padding: 50px;
+}
+.Contacts {
+  height: 80vh;
+}
+.About section h1,
+.Skills section h1,
+.Projects section h1,
+.Contact section h1,
+.Contacts section h1 {
+  text-align: center;
+  font-size: 55px;
+  letter-spacing: 0.2rem;
+}
+.Projects section h1 {
+  margin-top: 45px;
+}
+.Contacts section h2 {
+  text-align: center;
+  letter-spacing: 0.15rem;
+}
+
+.About .about-container {
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  gap: 3rem 3rem;
+}
+
+.my_name,
+.lastname {
+  font-weight: 400;
+  font-size: 35px;
+  padding: 20px;
+  letter-spacing: 0.25rem;
+  align-self: flex-start;
+  display: inline;
+  color: #f5f5f5;
+  background-color: #131313;
+}
+.a_description p {
+  margin-top: 25px;
+  text-align: start;
+  max-width: 700px;
+  font-size: 19px;
+  line-height: 2.5rem;
+  letter-spacing: 0.15rem;
+}
+.lastname {
+  margin-left: 70px;
+}
+.picture img {
+  border-radius: 50%;
+}
+.Skills section .language,
+.Projects section .my_projects {
+  justify-content: center;
+}
+.Projects {
+  margin-top: 45px;
+}
+.my_projects {
+  margin-top: 40px;
+}
+.language,
+.my_projects {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 50% 50%;
+}
+.language,
+.Projects {
+  max-width: 1560px;
+  margin: auto;
+}
+.language img:hover {
+  cursor: pointer;
+}
+.web_dev {
+  display: flex;
+  background: url("./images/web_dev.png"), #971ff9;
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 450px;
+  color: #ffffff;
+  padding: 130px;
+}
+.web_dev p,
+.backend_dev p,
+.mobile p,
+.others p,
+.project1 p,
+.project2 p,
+.project3 p,
+.project4 p,
+.project5 p {
+  text-align: center;
+  max-width: 900px;
+  font-size: 21px;
+  line-height: 2rem;
+  letter-spacing: 0.15rem;
+}
+.others p,
+.others h1 {
+  color: #ffffff;
+}
+.backend_dev {
+  display: flex;
+  background-image: url("./images/backend_dev.png");
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 450px;
+  padding: 130px;
+}
+.mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-image: url("./images/mobile.png");
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  padding: 130px;
+}
+.others {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: url("./images/others.png"), #971ff9;
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  padding: 130px;
+}
+.web_dev h2,
+.backend_dev h2 {
+  font-size: 25px;
+}
+
+.Projects a {
+  list-style-type: none;
+  text-decoration: none;
+}
+.project1 {
+  display: flex;
+  background: url("./images/project3.png"), #971ff9;
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  opacity: 1.5;
+  justify-content: space-evenly;
+  height: 450px;
+  color: #ffffff;
+  padding: 130px;
+}
+.project2 {
+  display: flex;
+  background: url("./images/project1.png"), #f5f5f5;
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 450px;
+  color: #ffffff;
+  padding: 130px;
+}
+.project3 {
+  display: flex;
+  background: url("./images/project2.png"), #f5f5f5;
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 450px;
+  color: #ffffff;
+  padding: 130px;
+}
+.project4 {
+  display: flex;
+  background: url("./images/project4.png"), #f5f5f5;
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 450px;
+  color: #ffffff;
+  padding: 130px;
+}
+.project5 {
+  display: flex;
+  background: url("./images/project5.png"), #f5f5f5;
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 450px;
+  color: #ffffff;
+  padding: 130px;
+}
+.Contacts div {
+  max-width: 1000px;
+  margin: auto;
+}
+.contacts {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.contacts div {
+  margin-top: 35px;
+  padding: 50px;
+  text-align: center;
+  border: 2px solid #971ff9;
+  letter-spacing: 0.15rem;
+}
+.social_medias {
+  display: flex;
+  flex-direction: row;
+  width: 35%;
+  justify-content: space-evenly;
+}
+.contact_title {
+  font-size: 65px;
+}
+
+footer div {
+  text-align: center;
+  font-size: 21px;
+  padding: 45px;
+  color: #f5f5f5;
+  background-color: #131313;
+}
+
+/*Responsive website*/
+
+@media only screen and (max-width: 1238px) {
+  .Skills section .language,
+  .Projects section .my_projects {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+}
+
+@media only screen and (max-width: 890px) {
+  .About .about-container {
+    display: block;
+    margin: auto;
+  }
+  .about-container .picture,
+  .about-container .a_description {
+    width: 100%;
+    display: block;
+  }
+  .about-container .picture,
+  img,
+  .about-container .a_description p {
+    display: block;
+    margin: auto;
+  }
+  .about-container .a_description h3 {
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+    margin-left: 0px;
+  }
+  .Contacts .contacts {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  ul {
+    display: block;
+  }
+  .active {
+    background-color: #971ff9;
+    padding: 15px;
+    transition: all ease-out 0.25s;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem 2.5rem;
+    height: 105px;
+  }
+}
+@media only screen and (max-width: 740px) {
+  .Home .description {
+    width: 50%;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .about-container .picture,
+  img {
+    height: auto;
+    width: 100%;
+  }
+  .web_dev,
+  .backend_dev,
+  .project2,
+  .mobile {
+    padding: 0px;
+  }
+  .description h1 {
+    font-size: 60px;
+  }
+  .description h2 {
+    font-size: 35px;
+  }
+}
