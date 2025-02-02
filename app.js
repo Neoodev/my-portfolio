@@ -1,6 +1,5 @@
 document.getElementsByTagName("nav")[0].style.backgroundColor = "";
 document.getElementsByTagName("nav")[0].style.transition = "all ease-in 0.5s";
-document.getElementsByTagName("nav")[0].style.width = `${93}%`;
 document.getElementsByTagName("nav")[0].style.position = "absolute";
 const banner = (document.getElementsByTagName(
   "article"
@@ -35,6 +34,21 @@ const navLinks = document.querySelectorAll("nav li a").forEach((link) => {
     }
   });
 });
+const mobileLinks = document
+  .querySelectorAll(".mobile-nav li a")
+  .forEach((link) => {
+    const links = ["Home", "About", "Skills", "Projects", "Contacts"];
+    link.addEventListener("click", () => {
+      for (a_link of links) {
+        if (a_link === link.innerHTML) {
+          document.querySelector(`.${a_link}`).scrollIntoView({
+            block: "nearest",
+            behavior: "smooth",
+          });
+        }
+      }
+    });
+  });
 
 $(document).ready(function () {
   var im_i = 0;
@@ -54,6 +68,7 @@ $(document).ready(function () {
   }, 3000);
 });
 const navLinkEls = document.querySelectorAll("#nav__link");
+const mobileLinkEls = document.querySelectorAll("#nav__link2");
 
 const articlesEls = document.querySelectorAll("article");
 
@@ -73,18 +88,57 @@ window.addEventListener("scroll", () => {
       document.getElementsByTagName("nav")[0].style.backgroundColor = "";
       document.getElementsByTagName("nav")[0].style.transition =
         "all ease-in 0.5s";
-      document.getElementsByTagName("nav")[0].style.width = `${93}%`;
       document.getElementsByTagName("nav")[0].style.position = "absolute";
     }
   });
 
-  navLinkEls.forEach((links) => {
-    if (links.href.includes(currentSection)) {
-      document.querySelector(".active")?.classList.remove("active");
-      links.classList.add("active");
-    }
-    if (links.href.includes("Home")) {
-      document.querySelector(".active")?.classList.remove("active");
-    }
+  if (window.outerWidth < 890) {
+    mobileLinkEls.forEach((links) => {
+      if (links.href.includes(currentSection)) {
+        document.querySelector(".active")?.classList.remove("active");
+        links.classList.add("active");
+      }
+      if (links.href.includes("Home")) {
+        document.querySelector(".active")?.classList.remove("active");
+      }
+    });
+  } else {
+    navLinkEls.forEach((links) => {
+      if (links.href.includes(currentSection)) {
+        document.querySelector(".active")?.classList.remove("active");
+        links.classList.add("active");
+      }
+      if (links.href.includes("Home")) {
+        document.querySelector(".active")?.classList.remove("active");
+      }
+    });
+  }
+});
+
+const navBar = document.getElementById("navBtn");
+const mobileNav = document.querySelector(".mobile-nav");
+navBar.addEventListener("click", function () {
+  mobileNav.classList.toggle("active");
+});
+
+var scrollTop = document.getElementById("scrollTop");
+
+window.onscroll = function () {
+  scrollfunction();
+};
+function scrollfunction() {
+  if (document.documentElement.scrollTop > 2500) {
+    scrollTop.style.display = "block";
+    scrollTop.style.transition = "all ease-in 1.5s";
+  } else {
+    scrollTop.style.display = "none";
+  }
+}
+
+scrollTop.addEventListener("click", function () {
+  window.scrollTo({
+    left: 0,
+    top: 0,
+    behavior: "smooth",
   });
 });
